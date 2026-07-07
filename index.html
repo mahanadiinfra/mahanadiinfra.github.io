@@ -491,6 +491,39 @@
     margin-top: 4px;
   }
 
+  /* ===== GALLERY ===== */
+  .gallery { background: var(--off-white); }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    aspect-ratio: 4/3;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.06);
+  }
+
+  @media (max-width: 720px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
   /* ===== CONTACT ===== */
   .contact { background: var(--off-white); }
 
@@ -688,6 +721,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#clients">Clients</a></li>
+    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
@@ -895,6 +929,19 @@
         <div class="client-sector">Various Sectors</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-eyebrow">Our Work</div>
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="images/mics-fleet-gallery-01.jpg" alt="MICS Fleet at Site"></div>
+    <div class="gallery-item"><img src="images/mics-fleet-gallery-02.jpg" alt="MICS Batching Plant"></div>
+    <div class="gallery-item"><img src="images/mics-fleet-gallery-03.jpg" alt="MICS RCC Foundation Work"></div>
+    <div class="gallery-item"><img src="images/mics-fleet-gallery-04.jpg" alt="MICS Night Concrete Pour"></div>
+    <div class="gallery-item"><img src="images/mics-fleet-gallery-05.jpg" alt="MICS Site Foundation Work"></div>
   </div>
 </section>
 
